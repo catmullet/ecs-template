@@ -8,4 +8,5 @@ require (
 	github.com/catmullet/dynamo v0.0.0-20190819140826-b21b4bae853a
 	github.com/labstack/echo/v4 v4.1.11
 	golang.org/x/crypto v0.0.0-20191219195013-becbf705a915 // indirect
+	gopkg.in/yaml.v2 v2.2.2
 )

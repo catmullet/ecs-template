@@ -1,0 +1,8 @@
+version: '1'
+services:
+  kms-api-enroll:
+    build: .
+    ports:
+      - 8080:5000
+    volumes:
+      - ./env:/opt/env

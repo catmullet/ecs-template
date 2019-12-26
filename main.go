@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/kyani-inc/kms-ecs-template/boostrap"
+	"github.com/kyani-inc/kms-ecs-template/local/helpers/environments"
 	log "github.com/kyani-inc/kms-ecs-template/logger"
 	"github.com/labstack/echo/v4"
 	"os"
@@ -25,13 +26,13 @@ func init() {
 }
 
 func main() {
-
 	// Echo instance
 	e := echo.New()
 
 	port := os.Getenv("PORT")
+
 	if len(port) == 0 {
-		port = "8021"
+		environments.LoadEnvironmentVariablesFromYml(environments.Staging)
 	}
 
 	// Health Info
@@ -48,7 +49,7 @@ func main() {
 	// Start server
 	e.HideBanner = true
 	fmt.Println(logo)
-	err := e.Start(fmt.Sprintf(":%s", port))
+	err := e.Start(fmt.Sprintf(":%s", os.Getenv("PORT")))
 
 	// If we get to this point Log any errors and shut it down
 	if err != nil {
