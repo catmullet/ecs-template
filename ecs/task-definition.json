@@ -21,9 +21,11 @@
       "image": "IMAGE_NAME",
       "cpu": 64,
       "logConfiguration": {
-        "logDriver": "syslog",
+        "logDriver": "awslogs",
         "options": {
-          "syslog-address": "tcp://127.0.0.1:601"
+          "awslogs-group": "/ecs/KMS_NAME-ENVIRONMENT",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
         }
       }
     }
