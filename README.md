@@ -1,4 +1,3 @@
-![](https://s3-us-west-2.amazonaws.com/assets.kyani.net/github/Screenshot+from+2019-11-20+14-40-24.png)
 # ECS Template
 
 ## Getting started
