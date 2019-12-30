@@ -1,0 +1,33 @@
+{
+  "containerDefinitions": [
+    {
+      "memory": 512,
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "protocol": "tcp"
+        }
+      ],
+      "ulimits": [
+        {
+          "name": "nofile",
+          "softLimit": 2048,
+          "hardLimit": 4096
+        }
+      ],
+      "environment": [],
+      "essential": true,
+      "name": "KMS_NAME-ENVIRONMENT",
+      "image": "IMAGE_NAME",
+      "cpu": 64,
+      "logConfiguration": {
+        "logDriver": "syslog",
+        "options": {
+          "syslog-address": "tcp://127.0.0.1:601"
+        }
+      }
+    }
+  ],
+  "family": "KMS_NAME-ENVIRONMENT",
+	"taskRoleArn": "arn:aws:iam::563280612930:role/KMS_NAME-ENVIRONMENT"
+}
