@@ -20,5 +20,5 @@ REGION=us-east-1
 
 TASK_DEF_PATH=ecs/task-definition.json
 TASK_DEF=$(get_updated_task_def)
-NAME=${KMS_NAME}-${ENVIRONMENT}
+NAME=${KMS_NAME}
 deploy
