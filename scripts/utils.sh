@@ -94,7 +94,7 @@ deploy() {
 				--cluster ${CLUSTER} \
 				--region ${REGION} \
 				--service ${NAME} \
-				--task-definition ${NAME}
+				--task-definition ${NAME}-${ENVIRONMENT}
 }
 
 get_updated_task_def() {
