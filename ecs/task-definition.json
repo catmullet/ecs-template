@@ -31,5 +31,5 @@
     }
   ],
   "family": "KMS_NAME-ENVIRONMENT",
-	"taskRoleArn": "arn:aws:iam::563280612930:role/KMS_NAME-ENVIRONMENT"
+	"taskRoleArn": "arn:aws:iam::563280612930:role/ecsTaskExecutionRole"
 }
